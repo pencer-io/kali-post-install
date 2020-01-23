@@ -1,13 +1,16 @@
-Add/correct these in /etc/apt/sources.list
+## Add/correct these in /etc/apt/sources.list
 deb https://http.kali.org/kali kali-rolling main non-free contrib
 deb-src http://http.kali.org/kali kali-rolling main non-free contrib
 
+## Get everything up to date
 apt update -y
 apt list --upgradable
 apt upgrade -y
 apt dist-upgrade -y
 apt autoremove -y
 
-Sort out timezone
+## Sort out timezone
 dpkg-reconfigure tzdata
 
+## Various extras to install
+apt-get install tree
