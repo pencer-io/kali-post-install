@@ -9,6 +9,9 @@ apt upgrade -y
 apt dist-upgrade -y
 apt autoremove -y
 
+## Sort out keyboard layout
+setxkbmap -layout gb
+
 ## Sort out timezone
 dpkg-reconfigure tzdata
 
