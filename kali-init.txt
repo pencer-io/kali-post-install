@@ -81,3 +81,6 @@ if [ -x /usr/bin/dircolors ]; then
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
 fi
+
+## Silent Firefox user.js
+https://gist.github.com/puzzlepeaches/afb8d748ce3530def9ccfb55846d6d4b
