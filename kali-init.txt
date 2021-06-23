@@ -1,5 +1,18 @@
-## Add/correct these in /etc/apt/sources.list
-deb https://http.kali.org/kali kali-rolling main non-free contrib
+## Copy stuff from old Kali to new if needed
+## Do this on old Kali first to enable SSH
+nano /etc/ssh/sshd_config
+# Change
+PermitRootLogin without-password
+# To
+PermitRootLogin yes
+# Start SSH
+service ssh start
+# SCP stuff across
+
+## Uncomment deb-src in /etc/apt/sources.list
+sed -i 's/# d/d/g' /etc/apt/sources.list
+# Should now be
+deb http://http.kali.org/kali kali-rolling main non-free contrib
 deb-src http://http.kali.org/kali kali-rolling main non-free contrib
 
 ## Get everything up to date
@@ -83,4 +96,4 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 ## Silent Firefox user.js
-https://gist.github.com/puzzlepeaches/afb8d748ce3530def9ccfb55846d6d4b
+https://gist.githubusercontent.com/puzzlepeaches/afb8d748ce3530def9ccfb55846d6d4b/raw/07c9d21aa2d76733179da05235e440fbf636b718/user.js
